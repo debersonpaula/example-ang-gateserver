@@ -1,0 +1,24 @@
+<div *ngIf="!session;else content">You dont have permission</div>
+
+<ng-template #content>
+  <h4>Editor</h4>
+
+  <mat-form-field>
+    <input matInput placeholder="Subject" [formControl]="fieldSubject">
+    <mat-error *ngIf="fieldSubject.invalid">{{ fieldSubject.hasError('required') ? 'Required Value' : '' }}</mat-error>
+  </mat-form-field>
+
+  <br/><br/>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Message" [formControl]="fieldMessage"></textarea>
+    <mat-error *ngIf="fieldMessage.invalid">{{ fieldMessage.hasError('required') ? 'Required Value' : '' }}</mat-error>
+  </mat-form-field>
+
+  <br/><br/>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+
+  <br/>
+  <p>{{error}}</p>
+
+</ng-template>

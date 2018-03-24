@@ -1,0 +1,35 @@
+app-header {
+    header {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-size: 30px;
+            font-weight: 300;
+            margin: 0;
+            padding: 28px 12px;
+            font-size: 20px;
+            outline: none;
+        }
+
+        .sidenav-toggle {
+            padding: 0;
+            margin: 8px;
+            min-width: 64px;
+            display: none;
+            @media (max-width: 720px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+          
+            mat-icon {
+                font-size: 30px;
+                height: 64px;
+                width: 64px;
+                line-height: 64px;
+                color: white;
+            }
+          }
+    }
+}

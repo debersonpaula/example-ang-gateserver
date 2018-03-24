@@ -1,0 +1,25 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav
+               [opened]="!isScreenSmall()"
+               [mode]="isScreenSmall() ? 'over' : 'side'"
+               [fixedInViewport]="isScreenSmall()"
+               fixedTopGap="56">
+    <nav>
+      <h3>Menu</h3>
+      <ul>
+        <li><a routerLink="/home" routerLinkActive="item-selected">Home</a></li>
+        <li><a routerLink="/test" routerLinkActive="item-selected">Test</a></li>
+        <ng-container *ngIf="session">
+          <li><a routerLink="/notes" routerLinkActive="item-selected">Notes</a></li>
+        </ng-container>
+      </ul>
+    </nav>
+  </mat-sidenav>
+
+  <div class="content">
+    <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+
+</mat-sidenav-container>

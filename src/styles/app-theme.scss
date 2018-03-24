@@ -1,0 +1,26 @@
+@import '../../node_modules/@angular/material/theming';
+@import '../app/common/navbar/navbar-theme';
+@import '../app/common/sidenav/sidenav-theme';
+@import '../app/common/footer/footer-theme';
+@import '../app/common/header/header-theme';
+
+// Styles for the docs app that are based on the current theme.
+@mixin app-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+
+	// main content
+	body {
+		background: mat-color($background, background);
+		font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+		margin: 0;
+	}
+	// components
+	@include nav-bar-theme($theme);
+	@include sidenav-theme($theme);
+	@include footer-theme($theme);
+	@include header-theme($theme);
+}
