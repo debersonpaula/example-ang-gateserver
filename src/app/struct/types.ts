@@ -41,3 +41,9 @@ export interface TNote {
     subject: string;
     message: string;
 }
+
+export interface TTrend {
+    id: number;
+    date: string;
+    value: string;
+}

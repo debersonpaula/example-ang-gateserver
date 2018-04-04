@@ -2,8 +2,35 @@
   "comments": [
     {
       "id": 1,
-      "subject": "dfsdfsdf",
-      "message": "fdsfsf"
+      "subject": "teste",
+      "message": "teste message"
+    }
+  ],
+  "trends": [
+    {
+      "id": 2,
+      "date": "2018-04-01T03:00:00.000Z",
+      "value": "25"
+    },
+    {
+      "id": 3,
+      "date": "2018-04-02T03:00:00.000Z",
+      "value": "20"
+    },
+    {
+      "id": 4,
+      "date": "2018-03-30T03:00:00.000Z",
+      "value": "15"
+    },
+    {
+      "id": 5,
+      "date": "2018-03-29T03:00:00.000Z",
+      "value": "45"
+    },
+    {
+      "id": 6,
+      "date": "2018-04-04T03:00:00.000Z",
+      "value": "10"
     }
   ]
 }

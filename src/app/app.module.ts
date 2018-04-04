@@ -14,7 +14,9 @@ import {
   MatDialogModule,
   MatSidenavModule,
   MatIconModule,
-  MatTableModule
+  MatTableModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 
 // services and library
@@ -35,6 +37,8 @@ import { Header } from './common/header';
 import { HomePage } from './views/home';
 import { TestComponent } from './views/test/test';
 import { NotesEditor, NotesList } from './views/notes';
+import { TrendsEditor, TrendsList } from './views/trends';
+import { Reports } from './views/reports';
 
 @NgModule({
   exports: [
@@ -45,7 +49,11 @@ import { NotesEditor, NotesList } from './views/notes';
     MatDialogModule,
     MatSidenavModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule,
+  ],
+  imports: [
+    MatNativeDateModule
   ],
   declarations: []
 })
@@ -59,7 +67,9 @@ export class MaterialModule {}
     HomePage,
     LoginComponent, RegisterComponent,
     TestComponent,
-    NotesEditor, NotesList
+    NotesEditor, NotesList,
+    TrendsEditor, TrendsList,
+    Reports,
   ],
   imports: [
     // angular modules

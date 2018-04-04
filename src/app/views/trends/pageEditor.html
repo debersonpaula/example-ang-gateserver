@@ -1,0 +1,30 @@
+<div *ngIf="!session;else content">You dont have permission</div>
+
+<ng-template #content>
+  <h4>Editor</h4>
+
+  <mat-form-field>
+    <input matInput placeholder="Date" [matDatepicker]="itemDate" [(ngModel)]="item.date">
+    <mat-datepicker #itemDate></mat-datepicker>
+    <mat-datepicker-toggle matSuffix [for]="itemDate"></mat-datepicker-toggle>
+  </mat-form-field>
+
+  <br/><br/>
+
+  <mat-form-field>
+    <input matInput placeholder="Value" [(ngModel)]="item.value">
+    <mat-error *ngIf="!item.value == 0">{{ item.value != 0 ? 'Required Value' : '' }}</mat-error>
+  </mat-form-field>
+
+  <br/><br/>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+
+  <br/>
+  <p>{{error}}</p>
+
+  <!-- <div>
+    <p>{{item.date}}</p>
+    <p>{{item.value}}</p>
+  </div> -->
+
+</ng-template>
